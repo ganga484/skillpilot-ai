@@ -1,0 +1,11 @@
+# Secret keys — never upload these
+.env
+
+# Installed packages (if you add any later)
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+data/

@@ -1,0 +1,13 @@
+{
+  "name": "skillpilot-ai",
+  "version": "3.0.0",
+  "description": "SkillPilot AI — Your AI-powered career and learning companion.",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
