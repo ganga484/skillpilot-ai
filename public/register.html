@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Create your free SkillPilot AI account." />
+  <title>Create account — SkillPilot AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+</head>
+<body>
+
+  <header id="site-header" class="navbar"></header>
+
+  <main class="auth">
+
+    <!-- Left: brand panel (hidden on small screens) -->
+    <aside class="auth-aside">
+      <h2>Start your career journey with SkillPilot AI</h2>
+      <p>One free account gives you access to all five AI tools.</p>
+      <ul class="auth-points">
+        <li><span class="dot"><span data-icon="check"></span></span>Build an ATS-friendly resume</li>
+        <li><span class="dot"><span data-icon="check"></span></span>Practise interviews with instant feedback</li>
+        <li><span class="dot"><span data-icon="check"></span></span>Generate professional job emails</li>
+        <li><span class="dot"><span data-icon="check"></span></span>Follow a personalised learning plan</li>
+        <li><span class="dot"><span data-icon="check"></span></span>Ask your AI Career Assistant anything</li>
+      </ul>
+    </aside>
+
+    <!-- Right: register form -->
+    <div class="auth-main">
+      <div class="auth-box reveal">
+        <h1>Create your account</h1>
+        <p>It's free and takes less than a minute.</p>
+
+        <form data-form="register" novalidate>
+          <div class="form-success" role="status"></div>
+
+          <div class="form-group">
+            <label for="fullName">Full name</label>
+            <div class="input-wrap">
+              <span data-icon="user"></span>
+              <input type="text" id="fullName" name="name" placeholder="Your full name" autocomplete="name" data-rule="name" />
+            </div>
+            <p class="error-text">Please enter your name (at least 2 characters).</p>
+          </div>
+
+          <div class="form-group">
+            <label for="regEmail">Email address</label>
+            <div class="input-wrap">
+              <span data-icon="mail"></span>
+              <input type="email" id="regEmail" name="email" placeholder="you@example.com" autocomplete="email" data-rule="email" />
+            </div>
+            <p class="error-text">Please enter a valid email address.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="regPassword">Password</label>
+            <div class="input-wrap has-toggle">
+              <span data-icon="lock"></span>
+              <input type="password" id="regPassword" name="password" placeholder="Create a password" autocomplete="new-password" data-rule="password" />
+              <button type="button" class="toggle-password" data-target="regPassword" aria-label="Show password"><span data-icon="eye"></span></button>
+            </div>
+            <div class="strength" id="strengthMeter" data-score="">
+              <div class="strength-bars"><i></i><i></i><i></i><i></i></div>
+              <small id="strengthLabel">Use 8+ characters with a mix of letters, numbers &amp; symbols</small>
+            </div>
+            <p class="error-text">Password must be at least 8 characters.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="regConfirm">Confirm password</label>
+            <div class="input-wrap has-toggle">
+              <span data-icon="lock"></span>
+              <input type="password" id="regConfirm" name="confirm" placeholder="Type it again" autocomplete="new-password" data-rule="match" data-match="regPassword" />
+              <button type="button" class="toggle-password" data-target="regConfirm" aria-label="Show password"><span data-icon="eye"></span></button>
+            </div>
+            <p class="error-text">Passwords don't match.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox">
+              <input type="checkbox" name="terms" data-rule="checked" />
+              <span>I agree to the <a href="about.html">Terms of Service</a> and <a href="about.html">Privacy Policy</a></span>
+            </label>
+            <p class="error-text">Please accept the terms to continue.</p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Create account <span data-icon="arrow"></span></button>
+        </form>
+
+        <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+
+        <div class="demo-note">
+          <span data-icon="lock"></span>
+          <span>Preview version: this form checks your details but doesn't save an account yet. Real accounts arrive when we add a backend.</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

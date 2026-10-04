@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Practise job interviews with an AI interviewer and get instant feedback." />
+  <title>AI Interview Assistant — SkillPilot AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+  <script src="js/ai.js" defer></script>
+</head>
+<body>
+
+  <header id="site-header" class="navbar"></header>
+
+  <main>
+    <!-- ================= TOOL HEADER ================= -->
+    <section class="tool-hero">
+      <div class="container">
+        <a href="tools.html" class="back-link"><span data-icon="back"></span> All AI tools</a>
+        <div class="tool-hero-row">
+          <div class="tool-icon tone-rose"><span data-icon="mic"></span></div>
+          <div>
+            <h1>AI Interview Assistant</h1>
+            <p>A 5-question mock interview with a score and tips after every answer.</p>
+          </div>
+          <span class="ai-status" data-ai-status>Checking AI…</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORKSPACE ================= -->
+    <section class="workspace-section">
+      <div class="container interview-layout">
+
+        <!-- Left: interview setup -->
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Set up your interview</h2>
+          </div>
+          <form class="panel-body" id="interviewSetup" novalidate>
+            <div class="form-group">
+              <label for="role">Job role</label>
+              <input type="text" id="role" name="role" placeholder="e.g. Data Analyst" required />
+              <p class="error-text">Please enter the job role.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="level">Experience level</label>
+              <select id="level" name="level">
+                <option>Student / fresher</option>
+                <option>0–2 years experience</option>
+                <option>2–5 years experience</option>
+                <option>5+ years experience</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="round">Interview type</label>
+              <select id="round" name="round">
+                <option>Mixed HR and technical</option>
+                <option>HR and behavioural</option>
+                <option>Technical</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="focus">Focus on <span class="optional">(optional)</span></label>
+              <input type="text" id="focus" name="focus" placeholder="e.g. SQL, Excel, teamwork" />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="interviewStart"><span data-icon="mic"></span>Start interview</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" id="interviewRestart" hidden><span data-icon="refresh"></span>New interview</button>
+
+            <ul class="tips">
+              <li><span data-icon="lightbulb"></span>Answer like a real interview: full sentences and real examples.</li>
+              <li><span data-icon="lightbulb"></span>Try the STAR method: Situation, Task, Action, Result.</li>
+              <li><span data-icon="lightbulb"></span>Stuck? Press "Hint" and the AI will help you.</li>
+            </ul>
+          </form>
+        </div>
+
+        <!-- Right: chat -->
+        <div class="panel chat">
+          <div class="panel-head">
+            <h2>Mock interview</h2>
+            <span class="progress-pill" id="interviewProgress" hidden></span>
+          </div>
+
+          <div class="chat-log" id="interviewLog" aria-live="polite">
+            <div class="chat-welcome" id="interviewWelcome">
+              <div class="tool-icon tone-rose"><span data-icon="mic"></span></div>
+              <h2>Ready when you are</h2>
+              <p>Enter the job role on the left and press <strong>Start interview</strong>. The AI interviewer will ask you 5 questions, one at a time.</p>
+            </div>
+          </div>
+
+          <form class="chat-input" id="interviewForm">
+            <button type="button" class="btn btn-secondary" id="interviewHint" title="Get a hint" aria-label="Get a hint"><span data-icon="lightbulb"></span></button>
+            <textarea rows="1" placeholder="Type your answer… (Enter to send, Shift + Enter for a new line)" aria-label="Your answer"></textarea>
+            <button type="submit" class="btn btn-primary" aria-label="Send answer"><span data-icon="send"></span></button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="footer"></footer>
+
+</body>
+</html>

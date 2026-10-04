@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your saved resumes on SkillPilot AI." />
+  <title>My Resumes — SkillPilot AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+  <script src="js/ai.js" defer></script>
+  <script src="js/resumes.js" defer></script>
+</head>
+<body>
+
+  <header id="site-header" class="navbar"></header>
+
+  <main>
+    <!-- ================= HEADER ================= -->
+    <section class="tool-hero">
+      <div class="container">
+        <div class="tool-hero-row">
+          <div class="tool-icon tone-blue"><span data-icon="resume"></span></div>
+          <div>
+            <h1>My Resumes</h1>
+            <p id="myResumesGreeting">Your saved resumes, stored safely in your account.</p>
+          </div>
+          <a href="resume.html" class="btn btn-primary"><span data-icon="sparkles"></span>New resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LIST ================= -->
+    <section class="workspace-section">
+      <div class="container">
+        <div class="saved-list" id="myResumes" aria-live="polite">
+          <div class="loading-label"><span class="spinner"></span>Loading…</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="footer"></footer>
+
+</body>
+</html>

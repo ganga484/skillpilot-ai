@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SkillPilot AI tools: Resume Builder, Interview Practice, Job Email Generator, Learning Planner and AI Career Assistant." />
+  <title>AI Tools — SkillPilot AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+</head>
+<body>
+
+  <header id="site-header" class="navbar"></header>
+
+  <main>
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow reveal">AI Tools</span>
+        <h1 class="reveal delay-1">Your <span class="gradient-text">AI toolkit</span> for career success</h1>
+        <p class="reveal delay-2">All five tools are powered by live AI. Pick one to get started. Use the filters to find tools for your job search, your learning or quick answers.</p>
+      </div>
+    </section>
+
+    <!-- ================= TOOLS ================= -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Filter buttons -->
+        <div class="filter-bar">
+          <div class="filter-group" role="group" aria-label="Filter tools">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All tools</button>
+            <button class="filter-btn" data-filter="career" aria-pressed="false">Job search</button>
+            <button class="filter-btn" data-filter="learning" aria-pressed="false">Learning</button>
+            <button class="filter-btn" data-filter="assistant" aria-pressed="false">Assistant</button>
+          </div>
+        </div>
+
+        <div class="tools-grid even">
+
+          <!-- 1. Resume Builder -->
+          <article class="tool-card tone-blue reveal" data-category="career">
+            <div class="tool-top">
+              <div class="tool-icon"><span data-icon="resume"></span></div>
+              <span class="badge badge-hot">Most popular</span>
+            </div>
+            <h3>Resume Generator</h3>
+            <p>Build a clean, professional resume that gets past applicant tracking systems (ATS).</p>
+            <ul class="checklist">
+              <li><span data-icon="check"></span>AI-written bullet points</li>
+              <li><span data-icon="check"></span>ATS-friendly templates</li>
+              <li><span data-icon="check"></span>Resume score &amp; tips</li>
+              <li><span data-icon="check"></span>Download as PDF</li>
+            </ul>
+            <div class="tool-footer">
+              <small>Job search</small>
+              <a href="resume.html" class="link-arrow">Open tool <span data-icon="arrow"></span></a>
+            </div>
+          </article>
+
+          <!-- 2. Interview Practice -->
+          <article class="tool-card tone-rose reveal delay-1" data-category="career">
+            <div class="tool-top">
+              <div class="tool-icon"><span data-icon="mic"></span></div>
+            </div>
+            <h3>Interview Assistant</h3>
+            <p>Practise with realistic questions for your target role and see where to improve.</p>
+            <ul class="checklist">
+              <li><span data-icon="check"></span>Role-specific questions</li>
+              <li><span data-icon="check"></span>HR &amp; technical rounds</li>
+              <li><span data-icon="check"></span>Instant answer feedback</li>
+              <li><span data-icon="check"></span>Confidence score</li>
+            </ul>
+            <div class="tool-footer">
+              <small>Job search</small>
+              <a href="interview.html" class="link-arrow">Open tool <span data-icon="arrow"></span></a>
+            </div>
+          </article>
+
+          <!-- 3. Job Email Generator -->
+          <article class="tool-card tone-amber reveal delay-2" data-category="career">
+            <div class="tool-top">
+              <div class="tool-icon"><span data-icon="mail"></span></div>
+            </div>
+            <h3>Job Email Generator</h3>
+            <p>Generate professional emails for every step of your job search.</p>
+            <ul class="checklist">
+              <li><span data-icon="check"></span>Application &amp; cover emails</li>
+              <li><span data-icon="check"></span>Follow-ups &amp; thank-you notes</li>
+              <li><span data-icon="check"></span>Friendly, professional or confident tone</li>
+              <li><span data-icon="check"></span>One-click copy</li>
+            </ul>
+            <div class="tool-footer">
+              <small>Job search</small>
+              <a href="email.html" class="link-arrow">Open tool <span data-icon="arrow"></span></a>
+            </div>
+          </article>
+
+          <!-- 4. Learning Planner -->
+          <article class="tool-card tone-emerald reveal" data-category="learning">
+            <div class="tool-top">
+              <div class="tool-icon"><span data-icon="book"></span></div>
+              <span class="badge badge-hot">New</span>
+            </div>
+            <h3>Learning Planner</h3>
+            <p>Turn any career goal into a clear, week-by-week learning roadmap.</p>
+            <ul class="checklist">
+              <li><span data-icon="check"></span>Personalised study plans</li>
+              <li><span data-icon="check"></span>Free resource suggestions</li>
+              <li><span data-icon="check"></span>Weekly milestones</li>
+              <li><span data-icon="check"></span>Progress tracking</li>
+            </ul>
+            <div class="tool-footer">
+              <small>Learning</small>
+              <a href="planner.html" class="link-arrow">Open tool <span data-icon="arrow"></span></a>
+            </div>
+          </article>
+
+          <!-- 5. AI Career Assistant -->
+          <article class="tool-card tone-violet reveal delay-1" data-category="assistant">
+            <div class="tool-top">
+              <div class="tool-icon"><span data-icon="bot"></span></div>
+              <span class="badge badge-hot">New</span>
+            </div>
+            <h3>AI Career Q&amp;A</h3>
+            <p>Chat with an AI that answers your career questions any time.</p>
+            <ul class="checklist">
+              <li><span data-icon="check"></span>Career path advice</li>
+              <li><span data-icon="check"></span>Skill gap analysis</li>
+              <li><span data-icon="check"></span>Salary &amp; job market insights</li>
+              <li><span data-icon="check"></span>Available 24/7</li>
+            </ul>
+            <div class="tool-footer">
+              <small>Assistant</small>
+              <a href="assistant.html" class="link-arrow">Open tool <span data-icon="arrow"></span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="section" style="padding-top: 0">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Have an idea for a new tool?</h2>
+          <p>Tell us what would help you most, and we'll build it into the next version.</p>
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-lg btn-white">Share your idea</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= "COMING SOON" POPUP ================= -->
+  <div class="modal-overlay" id="toolModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="icon-btn modal-close" data-close aria-label="Close"><span data-icon="close"></span></button>
+      <div class="tool-icon" id="modalIcon"></div>
+      <h3 id="modalTitle">Tool name</h3>
+      <p>This tool is coming soon! Create a free account and we'll let you know as soon as it's ready.</p>
+      <div class="cta-buttons">
+        <a href="register.html" class="btn btn-primary">Create free account</a>
+        <button class="btn btn-secondary" data-close>Maybe later</button>
+      </div>
+    </div>
+  </div>
+
+  <footer id="site-footer" class="footer"></footer>
+
+</body>
+</html>

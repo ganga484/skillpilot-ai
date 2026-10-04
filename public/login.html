@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Log in to SkillPilot AI." />
+  <title>Log in — SkillPilot AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+</head>
+<body>
+
+  <header id="site-header" class="navbar"></header>
+
+  <main class="auth">
+
+    <!-- Left: brand panel (hidden on small screens) -->
+    <aside class="auth-aside">
+      <h2>Welcome back to your career co-pilot</h2>
+      <p>Pick up right where you left off: your resume, your interview practice and your learning plan.</p>
+      <ul class="auth-points">
+        <li><span class="dot"><span data-icon="resume"></span></span>Your saved resumes and scores</li>
+        <li><span class="dot"><span data-icon="calendar"></span></span>This week's learning milestones</li>
+        <li><span class="dot"><span data-icon="message"></span></span>Your AI Career Assistant chats</li>
+      </ul>
+    </aside>
+
+    <!-- Right: login form -->
+    <div class="auth-main">
+      <div class="auth-box reveal">
+        <h1>Log in</h1>
+        <p>Enter your details to access your account.</p>
+
+        <form data-form="login" novalidate>
+          <div class="form-success" role="status"></div>
+
+          <div class="form-group">
+            <label for="loginEmail">Email address</label>
+            <div class="input-wrap">
+              <span data-icon="mail"></span>
+              <input type="email" id="loginEmail" name="email" placeholder="you@example.com" autocomplete="email" data-rule="email" />
+            </div>
+            <p class="error-text">Please enter a valid email address.</p>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="loginPassword" style="margin:0">Password</label>
+              <a href="contact.html">Forgot password?</a>
+            </div>
+            <div class="input-wrap has-toggle">
+              <span data-icon="lock"></span>
+              <input type="password" id="loginPassword" name="password" placeholder="Your password" autocomplete="current-password" data-rule="required" />
+              <button type="button" class="toggle-password" data-target="loginPassword" aria-label="Show password"><span data-icon="eye"></span></button>
+            </div>
+            <p class="error-text">Please enter your password.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox">
+              <input type="checkbox" name="remember" />
+              Keep me logged in
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Log in <span data-icon="arrow"></span></button>
+        </form>
+
+        <p class="auth-switch">Don't have an account? <a href="register.html">Create one free</a></p>
+
+        <div class="demo-note">
+          <span data-icon="lock"></span>
+          <span>Preview version: this form checks your details but doesn't sign you in yet. Real accounts arrive when we add a backend.</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

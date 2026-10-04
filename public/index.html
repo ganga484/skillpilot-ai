@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SkillPilot AI — Your AI-powered career and learning companion." />
+  <title>SkillPilot AI — Your AI-powered career and learning companion</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Our files -->
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+</head>
+<body>
+
+  <!-- Navigation bar (built by js/script.js) -->
+  <header id="site-header" class="navbar"></header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container hero-inner">
+
+        <!-- Left: text -->
+        <div class="hero-text">
+          <div class="pill reveal">
+            <span class="pill-tag">New</span>
+            5 AI tools for your career, in one place
+          </div>
+
+          <h1 class="reveal delay-1">
+            Land your dream job with an <span class="gradient-text nowrap">AI co-pilot</span>
+          </h1>
+
+          <p class="hero-lead reveal delay-2">
+            SkillPilot AI is your AI-powered career and learning companion. Build a standout resume,
+            practise interviews, write perfect job emails and follow a learning plan made just for you.
+          </p>
+
+          <div class="hero-cta reveal delay-3">
+            <a href="register.html" class="btn btn-primary btn-lg">Get started free <span data-icon="arrow"></span></a>
+            <a href="tools.html" class="btn btn-secondary btn-lg">Explore AI tools</a>
+          </div>
+
+          <div class="hero-trust reveal delay-3">
+            <div class="avatars" aria-hidden="true">
+              <span style="background:#6366f1">S</span>
+              <span style="background:#0ea5e9">F</span>
+              <span style="background:#10b981">C</span>
+              <span style="background:#f59e0b">J</span>
+            </div>
+            <span>Built for <strong>students, freshers</strong> &amp; <strong>career switchers</strong></span>
+          </div>
+        </div>
+
+        <!-- Right: product preview -->
+        <div class="preview reveal delay-2" aria-label="Preview of the SkillPilot dashboard">
+          <div class="dash">
+            <div class="dash-bar">
+              <i></i><i></i><i></i>
+              <span>skillpilot.ai / dashboard</span>
+            </div>
+
+            <div class="dash-body">
+              <div class="dash-greeting">
+                <h3>Good evening, Priya 👋</h3>
+                <p>Goal: Data Analyst · Week 5 of 12</p>
+              </div>
+
+              <div class="dash-row">
+                <div class="dash-tile">
+                  <p class="tile-label">Resume score</p>
+                  <div class="score-ring" style="--value: 86">
+                    <div><span><strong>86</strong><small>/ 100</small></span></div>
+                  </div>
+                </div>
+
+                <div class="dash-tile">
+                  <p class="tile-label">Skill progress</p>
+                  <div class="skill">
+                    <div class="skill-top"><span>SQL</span><span>80%</span></div>
+                    <div class="bar"><i style="width:80%"></i></div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-top"><span>Python</span><span>60%</span></div>
+                    <div class="bar"><i style="width:60%"></i></div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-top"><span>Power BI</span><span>35%</span></div>
+                    <div class="bar"><i style="width:35%"></i></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="task tone-rose">
+                <div class="task-icon"><span data-icon="mic"></span></div>
+                <div>
+                  <strong>Mock interview: Data Analyst</strong>
+                  <small>Today · 6:00 PM · 10 questions</small>
+                </div>
+                <span class="chip">Up next</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card float-1 tone-emerald">
+            <div class="task-icon"><span data-icon="trending"></span></div>
+            <div><strong>ATS score +24%</strong><small>After AI rewrite</small></div>
+          </div>
+
+          <div class="float-card float-2 tone-amber">
+            <div class="task-icon"><span data-icon="mail"></span></div>
+            <div><strong>Email drafted</strong><small>Follow-up to recruiter</small></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= STATS ================= -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid reveal">
+          <div class="stat"><strong class="gradient-text">5</strong><span>AI career tools</span></div>
+          <div class="stat"><strong class="gradient-text">24/7</strong><span>Always available</span></div>
+          <div class="stat"><strong class="gradient-text">2 min</strong><span>To your first result</span></div>
+          <div class="stat"><strong class="gradient-text">Free</strong><span>To get started</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AI TOOLS ================= -->
+    <section class="section" id="tools">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">AI Tools</span>
+          <h2>Everything you need to get hired</h2>
+          <p>Five focused tools that work together, from learning new skills to sending your final follow-up email.</p>
+        </div>
+
+        <div class="tools-grid">
+
+          <article class="tool-card tone-blue reveal">
+            <div class="tool-top">
+              <div class="tool-icon"><span data-icon="resume"></span></div>
+              <span class="badge badge-hot">Most popular</span>
+            </div>
+            <h3>Resume Generator</h3>
+            <p>Create an ATS-friendly resume with strong, AI-written bullet points in minutes.</p>
+            <ul class="checklist">
+              <li><span data-icon="check"></span>Professional templates</li>
+              <li><span data-icon="check"></span>AI bullet point writer</li>
+            </ul>
+            <div class="tool-footer">
+              <small>Job search</small>
+              <a href="resume.html" class="link-arrow">Try it <span data-icon="arrow"></span></a>
+            </div>
+          </article>
+
+          <article class="tool-card tone-rose reveal delay-1">
+            <div class="tool-top">
+              <div class="tool-icon"><span data-icon="mic"></span></div>
+            </div>
+            <h3>Interview Assistant</h3>
+            <p>Answer real interview questions for your role and get instant, honest feedback.</p>
+            <ul class="checklist">
+              <li><span data-icon="check"></span>HR &amp; technical rounds</li>
+              <li><span data-icon="check"></span>Answer scoring</li>
+            </ul>
+            <div class="tool-footer">
+              <small>Job search</small>
+              <a href="interview.html" class="link-arrow">Try it <span data-icon="arrow"></span></a>
+            </div>
+          </article>
+
+          <article class="tool-card tone-amber reveal delay-2">
+            <div class="tool-top">
+              <div class="tool-icon"><span data-icon="mail"></span></div>
+            </div>
+            <h3>Job Email Generator</h3>
+            <p>Write polished application, follow-up and thank-you emails in seconds.</p>
+            <ul class="checklist">
+              <li><span data-icon="check"></span>Choose your tone</li>
+              <li><span data-icon="check"></span>Ready to copy &amp; send</li>
+            </ul>
+            <div class="tool-footer">
+              <small>Job search</small>
+              <a href="email.html" class="link-arrow">Try it <span data-icon="arrow"></span></a>
+            </div>
+          </article>
+
+          <article class="tool-card tone-emerald reveal">
+            <div class="tool-top">
+              <div class="tool-icon"><span data-icon="book"></span></div>
+            </div>
+            <h3>Learning Planner</h3>
+            <p>Turn any goal into a clear week-by-week roadmap with free resources and progress tracking.</p>
+            <ul class="checklist">
+              <li><span data-icon="check"></span>Personalised study plan</li>
+              <li><span data-icon="check"></span>Weekly milestones</li>
+            </ul>
+            <div class="tool-footer">
+              <small>Learning</small>
+              <a href="planner.html" class="link-arrow">Try it <span data-icon="arrow"></span></a>
+            </div>
+          </article>
+
+          <article class="tool-card tone-violet reveal delay-1">
+            <div class="tool-top">
+              <div class="tool-icon"><span data-icon="bot"></span></div>
+              <span class="badge badge-hot">New</span>
+            </div>
+            <h3>AI Career Q&amp;A</h3>
+            <p>Ask anything about careers, skills and salaries, and get clear answers any time of day.</p>
+            <ul class="checklist">
+              <li><span data-icon="check"></span>Career path guidance</li>
+              <li><span data-icon="check"></span>Skill gap analysis</li>
+            </ul>
+            <div class="tool-footer">
+              <small>Assistant</small>
+              <a href="assistant.html" class="link-arrow">Try it <span data-icon="arrow"></span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2>From confused to confident in 3 steps</h2>
+          <p>No experience needed. SkillPilot guides you at every stage.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-num">1</div>
+            <h3>Set your goal</h3>
+            <p>Tell us the role you want or the skill you'd like to learn.</p>
+          </div>
+          <div class="step reveal delay-1">
+            <div class="step-num">2</div>
+            <h3>Use the right tool</h3>
+            <p>Build your resume, practise interviews or follow your learning plan.</p>
+          </div>
+          <div class="step reveal delay-2">
+            <div class="step-num">3</div>
+            <h3>Apply with confidence</h3>
+            <p>Send polished applications and keep improving with AI feedback.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY SKILLPILOT ================= -->
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Why SkillPilot</span>
+          <h2>Career guidance that actually fits you</h2>
+          <p>Generic advice doesn't get you hired. SkillPilot adapts to your goal, your level and your pace.</p>
+
+          <div class="feature-list">
+            <div class="feature">
+              <div class="feature-icon"><span data-icon="target"></span></div>
+              <div>
+                <h4>Personalised to your goal</h4>
+                <p>Every plan, resume and email is shaped around the role you want.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon"><span data-icon="zap"></span></div>
+              <div>
+                <h4>Fast, practical results</h4>
+                <p>Get something useful in minutes, not hours of searching.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon"><span data-icon="shield"></span></div>
+              <div>
+                <h4>Private by design</h4>
+                <p>Your resume and career details stay yours.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample output from the Job Email Generator -->
+        <div class="email-preview reveal delay-1" aria-label="Example of a generated job email">
+          <div class="email-head">
+            <strong><span data-icon="sparkles"></span> Job Email Generator</strong>
+            <div class="tone-switch">
+              <span>Friendly</span>
+              <span class="on">Professional</span>
+              <span>Confident</span>
+            </div>
+          </div>
+          <div class="email-body">
+            <div class="email-field"><span>To</span><b>Hiring Manager</b></div>
+            <div class="email-field"><span>Subject</span><b>Application for Junior Data Analyst</b></div>
+            <p>Dear Hiring Manager,</p>
+            <p>I'm excited to apply for the Junior Data Analyst role. Over the past three months I've built dashboards in Power BI and cleaned real datasets using SQL and Python…</p>
+            <p>I'd welcome the chance to discuss how I can help your team<span class="typing"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="section" style="padding-top: 0">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Ready for take-off?</h2>
+          <p>Create your free account and start building your career with SkillPilot AI today.</p>
+          <div class="cta-buttons">
+            <a href="register.html" class="btn btn-lg btn-white">Create free account</a>
+            <a href="tools.html" class="btn btn-lg btn-outline-white">See all tools</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (built by js/script.js) -->
+  <footer id="site-footer" class="footer"></footer>
+
+</body>
+</html>

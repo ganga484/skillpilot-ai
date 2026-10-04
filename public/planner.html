@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Turn any career goal into a clear week-by-week learning plan with AI." />
+  <title>AI Learning Planner — SkillPilot AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+  <script src="js/ai.js" defer></script>
+</head>
+<body class="resume-page">
+
+  <header id="site-header" class="navbar"></header>
+
+  <main>
+    <!-- ================= TOOL HEADER ================= -->
+    <section class="tool-hero">
+      <div class="container">
+        <a href="tools.html" class="back-link"><span data-icon="back"></span> All AI tools</a>
+        <div class="tool-hero-row">
+          <div class="tool-icon tone-emerald"><span data-icon="book"></span></div>
+          <div>
+            <h1>AI Learning Planner</h1>
+            <p>Tell us your goal and the AI builds a week-by-week plan with free resources and milestones.</p>
+          </div>
+          <span class="ai-status" data-ai-status>Checking AI…</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORKSPACE ================= -->
+    <section class="workspace-section">
+      <div class="container workspace">
+
+        <!-- Left: form -->
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Your goal</h2>
+            <button type="button" class="btn btn-secondary btn-sm" id="plannerExample"><span data-icon="wand"></span>Fill example</button>
+          </div>
+
+          <form class="panel-body" id="plannerForm" novalidate>
+            <div class="form-group">
+              <label for="goal">What do you want to learn or become?</label>
+              <input type="text" id="goal" name="goal" placeholder="e.g. Become a Data Analyst" required />
+              <p class="error-text">Please enter your goal.</p>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="level">Your current level</label>
+                <select id="level" name="level">
+                  <option>Complete beginner</option>
+                  <option>I know some basics</option>
+                  <option>Intermediate</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="weeks">Plan length</label>
+                <select id="weeks" name="weeks">
+                  <option value="4">4 weeks</option>
+                  <option value="8" selected>8 weeks</option>
+                  <option value="12">12 weeks</option>
+                  <option value="16">16 weeks</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <span class="label-row">Time per week</span>
+              <div class="segmented" role="radiogroup" aria-label="Hours per week">
+                <label><input type="radio" name="hours" value="5" /><span>5 hrs</span></label>
+                <label><input type="radio" name="hours" value="10" checked /><span>10 hrs</span></label>
+                <label><input type="radio" name="hours" value="15" /><span>15 hrs</span></label>
+                <label><input type="radio" name="hours" value="20" /><span>20+ hrs</span></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="known">What do you already know? <span class="optional">(optional)</span></label>
+              <textarea id="known" name="known" class="short" placeholder="e.g. Basic Excel, a little SQL from college"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="focus">Anything special? <span class="optional">(optional)</span></label>
+              <input type="text" id="focus" name="focus" placeholder="e.g. Free resources only, prepare for campus placements" />
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-lg"><span data-icon="sparkles"></span>Create my plan</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: result -->
+        <div class="panel output-panel">
+          <div class="panel-head">
+            <h2>Your learning plan</h2>
+            <div class="panel-actions" id="plannerActions" hidden>
+              <button type="button" class="btn btn-secondary btn-sm" id="plannerCopy"><span data-icon="copy"></span>Copy</button>
+              <button type="button" class="btn btn-primary btn-sm" id="plannerPrint"><span data-icon="download"></span>Download PDF</button>
+            </div>
+          </div>
+          <div class="plan-progress" id="plannerProgress" hidden>
+            <div class="plan-progress-top"><span>Your progress</span><strong id="plannerProgressText">0 of 0 weeks done</strong></div>
+            <div class="bar"><i id="plannerProgressBar" style="width:0%"></i></div>
+          </div>
+          <div class="output print-area" id="plannerOutput" aria-live="polite">
+            <div class="empty-state">
+              <div class="tool-icon tone-emerald"><span data-icon="book"></span></div>
+              <strong>Your plan will appear here</strong>
+              <p>Enter your goal (or click "Fill example") and press Create my plan. Tick off each week as you finish it.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="footer"></footer>
+
+</body>
+</html>

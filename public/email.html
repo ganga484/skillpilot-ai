@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Write professional job application, follow-up and thank-you emails with AI." />
+  <title>AI Job Email Generator — SkillPilot AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+  <script src="js/ai.js" defer></script>
+</head>
+<body>
+
+  <header id="site-header" class="navbar"></header>
+
+  <main>
+    <!-- ================= TOOL HEADER ================= -->
+    <section class="tool-hero">
+      <div class="container">
+        <a href="tools.html" class="back-link"><span data-icon="back"></span> All AI tools</a>
+        <div class="tool-hero-row">
+          <div class="tool-icon tone-amber"><span data-icon="mail"></span></div>
+          <div>
+            <h1>AI Job Email Generator</h1>
+            <p>Application, follow-up, thank-you and more: a polished email in seconds.</p>
+          </div>
+          <span class="ai-status" data-ai-status>Checking AI…</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORKSPACE ================= -->
+    <section class="workspace-section">
+      <div class="container workspace">
+
+        <!-- Left: form -->
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Email details</h2>
+            <button type="button" class="btn btn-secondary btn-sm" id="emailExample"><span data-icon="wand"></span>Fill example</button>
+          </div>
+
+          <form class="panel-body" id="emailForm" novalidate>
+            <div class="form-group">
+              <label for="type">What kind of email?</label>
+              <select id="type" name="type">
+                <option value="application">Job application (with resume)</option>
+                <option value="follow-up">Follow-up (no reply yet)</option>
+                <option value="thank-you">Thank you after interview</option>
+                <option value="referral">Ask for a referral</option>
+                <option value="networking">Networking / informational chat</option>
+                <option value="acceptance">Accept a job offer</option>
+                <option value="decline">Decline a job offer</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <span class="label-row">Tone</span>
+              <div class="segmented" role="radiogroup" aria-label="Tone">
+                <label><input type="radio" name="tone" value="professional" checked /><span>Professional</span></label>
+                <label><input type="radio" name="tone" value="friendly" /><span>Friendly</span></label>
+                <label><input type="radio" name="tone" value="confident" /><span>Confident</span></label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="yourName">Your name</label>
+                <input type="text" id="yourName" name="yourName" placeholder="Rahul Verma" autocomplete="name" required />
+                <p class="error-text">Please enter your name.</p>
+              </div>
+              <div class="form-group">
+                <label for="role">Job role</label>
+                <input type="text" id="role" name="role" placeholder="Junior Web Developer" required />
+                <p class="error-text">Please enter the job role.</p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="company">Company <span class="optional">(optional)</span></label>
+                <input type="text" id="company" name="company" placeholder="TechNova Solutions" />
+              </div>
+              <div class="form-group">
+                <label for="recipient">Recipient <span class="optional">(optional)</span></label>
+                <input type="text" id="recipient" name="recipient" placeholder="Hiring Manager" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="details">Key points to include <span class="optional">(optional)</span></label>
+              <textarea id="details" name="details" placeholder="E.g. where you saw the job, your top skills, interview date, what you want to ask…"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-lg"><span data-icon="sparkles"></span>Write my email</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: result -->
+        <div class="panel output-panel">
+          <div class="panel-head">
+            <h2>Your email</h2>
+            <div class="panel-actions" id="emailActions" hidden>
+              <button type="button" class="btn btn-secondary btn-sm" id="emailCopy"><span data-icon="copy"></span>Copy</button>
+              <a class="btn btn-primary btn-sm" id="emailOpen" href="#"><span data-icon="mail"></span>Open in email app</a>
+            </div>
+          </div>
+          <div class="output" id="emailOutput" aria-live="polite">
+            <div class="empty-state">
+              <div class="tool-icon tone-amber"><span data-icon="mail"></span></div>
+              <strong>Your email will appear here</strong>
+              <p>Choose the email type and tone, add a few details, then press Write my email.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="footer"></footer>
+
+</body>
+</html>

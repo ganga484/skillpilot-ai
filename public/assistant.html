@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ask the SkillPilot AI Career Assistant anything about careers, skills and jobs." />
+  <title>AI Career Q&amp;A — SkillPilot AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+  <script src="js/ai.js" defer></script>
+</head>
+<body>
+
+  <header id="site-header" class="navbar"></header>
+
+  <main>
+    <!-- ================= TOOL HEADER ================= -->
+    <section class="tool-hero">
+      <div class="container">
+        <a href="tools.html" class="back-link"><span data-icon="back"></span> All AI tools</a>
+        <div class="tool-hero-row">
+          <div class="tool-icon tone-violet"><span data-icon="bot"></span></div>
+          <div>
+            <h1>AI Career Q&amp;A</h1>
+            <p>Ask anything about careers, skills, job hunting or switching fields.</p>
+          </div>
+          <span class="ai-status" data-ai-status>Checking AI…</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CHAT ================= -->
+    <section class="workspace-section">
+      <div class="container career-wrap">
+        <div class="panel chat">
+          <div class="panel-head">
+            <h2>Career Assistant</h2>
+            <button type="button" class="btn btn-secondary btn-sm" id="careerReset"><span data-icon="refresh"></span>New chat</button>
+          </div>
+
+          <div class="chat-log" id="careerLog" aria-live="polite">
+            <div class="chat-welcome" id="careerWelcome">
+              <div class="tool-icon tone-violet"><span data-icon="bot"></span></div>
+              <h2>Hi! I'm your AI career assistant</h2>
+              <p>Ask me about career paths, skills to learn, job searching, salaries or interviews. Try one of these:</p>
+              <div class="chips">
+                <button type="button" class="chip-btn" data-question="How can I become a data analyst in 6 months as a fresher?"><span data-icon="trending"></span>Become a data analyst in 6 months</button>
+                <button type="button" class="chip-btn" data-question="Which skills are most in demand for freshers right now?"><span data-icon="zap"></span>Most in-demand skills for freshers</button>
+                <button type="button" class="chip-btn" data-question="How do I switch from a non-IT job into software development?"><span data-icon="refresh"></span>Switch from non-IT to software</button>
+                <button type="button" class="chip-btn" data-question="How should I prepare for campus placements in the next 3 months?"><span data-icon="calendar"></span>3-month campus placement plan</button>
+              </div>
+            </div>
+          </div>
+
+          <form class="chat-input" id="careerForm">
+            <textarea rows="1" placeholder="Ask a career question… (Enter to send)" aria-label="Your question"></textarea>
+            <button type="submit" class="btn btn-primary" aria-label="Send question"><span data-icon="send"></span></button>
+          </form>
+          <p class="chat-note">AI can make mistakes. Double-check important details like salaries and deadlines.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="footer"></footer>
+
+</body>
+</html>

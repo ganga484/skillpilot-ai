@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Generate a professional, ATS-friendly resume with AI." />
+  <title>AI Resume Generator — SkillPilot AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+  <script src="js/ai.js" defer></script>
+  <script src="js/resumes.js" defer></script>
+</head>
+<body class="resume-page">
+
+  <header id="site-header" class="navbar"></header>
+
+  <main>
+    <!-- ================= TOOL HEADER ================= -->
+    <section class="tool-hero">
+      <div class="container">
+        <a href="tools.html" class="back-link"><span data-icon="back"></span> All AI tools</a>
+        <div class="tool-hero-row">
+          <div class="tool-icon tone-blue"><span data-icon="resume"></span></div>
+          <div>
+            <h1>AI Resume Generator</h1>
+            <p>Fill in your details and the AI writes a clean, ATS-friendly resume for your target role.</p>
+          </div>
+          <span class="ai-status" data-ai-status>Checking AI…</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORKSPACE ================= -->
+    <section class="workspace-section">
+      <div class="container workspace">
+
+        <!-- Left: form -->
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Your details</h2>
+            <button type="button" class="btn btn-secondary btn-sm" id="resumeExample"><span data-icon="wand"></span>Fill example</button>
+          </div>
+
+          <form class="panel-body" id="resumeForm" novalidate>
+            <p class="form-section-title">Basics</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Priya Sharma" autocomplete="name" required />
+                <p class="error-text">Please enter your name.</p>
+              </div>
+              <div class="form-group">
+                <label for="targetRole">Target role</label>
+                <input type="text" id="targetRole" name="targetRole" placeholder="Junior Data Analyst" required />
+                <p class="error-text">Please enter the job you want.</p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span class="optional">(optional)</span></label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone <span class="optional">(optional)</span></label>
+                <input type="text" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="location">City <span class="optional">(optional)</span></label>
+                <input type="text" id="location" name="location" placeholder="Hyderabad, India" />
+              </div>
+              <div class="form-group">
+                <label for="links">Links <span class="optional">(optional)</span></label>
+                <input type="text" id="links" name="links" placeholder="LinkedIn, GitHub, portfolio" />
+              </div>
+            </div>
+
+            <p class="form-section-title">Your background</p>
+
+            <div class="form-group">
+              <label for="summary">About you <span class="optional">(optional)</span></label>
+              <textarea id="summary" name="summary" class="short" placeholder="A few words about who you are and what you're good at."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="experience">Work experience / internships</label>
+              <textarea id="experience" name="experience" placeholder="Job title, company, dates, and what you did. Rough notes are fine; the AI will polish them."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="projects">Projects</label>
+              <textarea id="projects" name="projects" class="short" placeholder="Project name: what you built and which tools you used."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="education">Education</label>
+              <textarea id="education" name="education" class="short" placeholder="Degree, college, years, CGPA or percentage."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="skills">Skills</label>
+              <input type="text" id="skills" name="skills" placeholder="SQL, Excel, Python, communication…" />
+              <p class="hint">Separate skills with commas.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="certifications">Certifications &amp; achievements <span class="optional">(optional)</span></label>
+              <input type="text" id="certifications" name="certifications" placeholder="Courses, awards, hackathons…" />
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-lg"><span data-icon="sparkles"></span>Generate resume</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: result -->
+        <div class="panel output-panel">
+          <div class="panel-head">
+            <h2>Your resume</h2>
+            <div class="panel-actions" id="resumeActions" hidden>
+              <button type="button" class="btn btn-secondary btn-sm" id="resumeCopy"><span data-icon="copy"></span>Copy</button>
+              <button type="button" class="btn btn-secondary btn-sm" id="resumeSave"><span data-icon="check"></span>Save</button>
+              <button type="button" class="btn btn-primary btn-sm" id="resumePrint"><span data-icon="download"></span>Download PDF</button>
+            </div>
+          </div>
+          <p class="save-status" id="resumeSaveStatus" hidden></p>
+          <div class="output print-area" id="resumeOutput" aria-live="polite">
+            <div class="empty-state">
+              <div class="tool-icon tone-blue"><span data-icon="resume"></span></div>
+              <strong>Your AI resume will appear here</strong>
+              <p>Fill in your details (or click "Fill example") and press Generate resume.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="footer"></footer>
+
+</body>
+</html>
